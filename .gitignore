@@ -1,0 +1,20 @@
+.sftp-config
+sftp-config.json
+.sql
+
+# Auto generated
+.DS_Store
+Thumbs.db
+
+# SASS
+.scssc
+.sass-cache
+
+# Composer
+composer.phar
+/vendor/
+
+# Misc
+/bower_components
+/node_modules
+/vendor
