@@ -21,7 +21,11 @@ $Parsedown = new Parsedown();
 <!DOCTYPE html>
 <html lang="<?php echo htmlspecialchars($locale); ?>">
 <head>
-<title></title>
+<title><?php echo $Translate->__('page-title');?></title>
+<meta name="description" content="<?php echo $Translate->__('page-description');?>">
+
+<!-- @todo: social -->
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,8 +37,8 @@ $Parsedown = new Parsedown();
 <section class="hero is-fullheight">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title"><?php echo $Parsedown->text($Translate->__('xwc-summit-china-2017'));?></h1>
-      <h2 class="subtitle"><?php echo $Parsedown->text($Translate->__('2017-10-12-shanghai-china'));?></h2>
+      <h1 class="title"><?php echo $Translate->__('xwc-summit-china-2017');?></h1>
+      <h2 class="subtitle"><?php echo $Translate->__('2017-10-12-shanghai-china');?></h2>
     </div>
   </div>
 </section>
@@ -42,34 +46,33 @@ $Parsedown = new Parsedown();
 <section class="section">
     <div class="container">
         <h2 class="title"><?php echo $Parsedown->text($Translate->__('about-the-xwc-summit'));?></h2>
-        <p><?php echo $Parsedown->text($Translate->__('about-the-xwc-summit-introduction'));?></p>
-        <p><?php echo $Parsedown->text($Translate->__('about-the-xwc-summit-continued'));?></p>
+        <?php echo $Parsedown->text($Translate->__('about-the-xwc-summit-introduction--markdown'));?>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
-        <h2 class="title"><?php echo $Parsedown->text($Translate->__('Speakers'));?></h2>
+        <h2 class="title"><?php echo $Translate->__('speakers');?></h2>
         <div class="columns">
             <div class="column">
-                <h3 class="subtitle"><?php echo $Parsedown->text($Translate->__('oizopower'));?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Parsedown->text($Translate->__('oizopower'));?>">
-                <p><?php echo $Parsedown->text($Translate->__('oizopower-introduction'));?></p>
+                <h3 class="subtitle"><?php echo $Translate->__('oizopower');?></h3>
+                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('oizopower');?>">
+                <p><?php echo $Parsedown->text($Translate->__('oizopower-introduction--markdown'));?></p>
             </div>
             <div class="column">
-                <h3 class="subtitle"><?php echo $Parsedown->text($Translate->__('lizhi'));?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Parsedown->text($Translate->__('lizhi'));?>">
-                <p><?php echo $Parsedown->text($Translate->__('lizhi-introduction'));?></p>
+                <h3 class="subtitle"><?php echo $Translate->__('lizhi');?></h3>
+                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('lizhi');?>">
+                <p><?php echo $Parsedown->text($Translate->__('lizhi-introduction--markdown'));?></p>
             </div>
             <div class="column">
-                <h3 class="subtitle"><?php echo $Parsedown->text($Translate->__('waligu'));?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Parsedown->text($Translate->__('waligu'));?>">
-                <p><?php echo $Parsedown->text($Translate->__('waligu-introduction'));?></p>
+                <h3 class="subtitle"><?php echo $Translate->__('waligu');?></h3>
+                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('waligu');?>">
+                <p><?php echo $Parsedown->text($Translate->__('waligu-introduction--markdown'));?></p>
             </div>
             <div class="column">
-                <h3 class="subtitle"><?php echo $Parsedown->text($Translate->__('will'));?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Parsedown->text($Translate->__('will'));?>">
-                <p><?php echo $Parsedown->text($Translate->__('will-introduction'));?></p>
+                <h3 class="subtitle"><?php echo $Translate->__('will');?></h3>
+                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('will');?>">
+                <p><?php echo $Parsedown->text($Translate->__('will-introduction--markdown'));?></p>
             </div>
         </div>
     </div>
@@ -77,13 +80,19 @@ $Parsedown = new Parsedown();
 
 <section class="section">
     <div class="container">
-        <h2 class="title"><?php echo $Parsedown->text($Translate->__('details'));?></h2>
-        <p><?php echo $Parsedown->text($Translate->__('details-venue-meeting'));?></p>
-        <p><?php echo $Parsedown->text($Translate->__('details-venue-banquet'));?></p>
-        <p><?php echo $Parsedown->text($Translate->__('details-public-transport'));?></p>
-        <p><?php echo $Parsedown->text($Translate->__('details-attendance-package'));?></p>
+        <h2 class="title"><?php echo $Translate->__('details');?></h2>
+        <?php echo $Parsedown->text($Translate->__('details-venue-meeting--markdown'));?>
+        <?php echo $Parsedown->text($Translate->__('details-venue-banquet--markdown'));?>
+        <?php echo $Parsedown->text($Translate->__('details-public-transport--markdown'));?>
+        <?php echo $Parsedown->text($Translate->__('details-attendance-package--markdown'));?>
     </div>
 </section>
 
+<script>
+// lazy load full screen image
+(function() {
+    document.getElementsByClassName('hero')[0].classList.add('hero-background');
+})();
+</script>
 </body>
 </html>
