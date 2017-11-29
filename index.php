@@ -86,22 +86,22 @@ $Parsedown = new Parsedown();
         <div class="columns">
             <div class="column">
                 <h3 class="subtitle"><?php echo $Translate->__('oizopower');?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('oizopower');?>">
+                <img src="/img/photo-oizopower.png" alt="<?php echo $Translate->__('oizopower');?>">
                 <p><?php echo $Parsedown->text($Translate->__('oizopower-introduction--markdown'));?></p>
             </div>
             <div class="column">
                 <h3 class="subtitle"><?php echo $Translate->__('lizhi');?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('lizhi');?>">
+                <img src="/img/photo-lizhi.png" alt="<?php echo $Translate->__('lizhi');?>">
                 <p><?php echo $Parsedown->text($Translate->__('lizhi-introduction--markdown'));?></p>
             </div>
             <div class="column">
                 <h3 class="subtitle"><?php echo $Translate->__('waligu');?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('waligu');?>">
+                <img src="/img/photo-waligu.png" alt="<?php echo $Translate->__('waligu');?>">
                 <p><?php echo $Parsedown->text($Translate->__('waligu-introduction--markdown'));?></p>
             </div>
             <div class="column">
                 <h3 class="subtitle"><?php echo $Translate->__('will');?></h3>
-                <img src="http://placehold.it/500x500" alt="<?php echo $Translate->__('will');?>">
+                <img src="/img/photo-will.png" alt="<?php echo $Translate->__('will');?>">
                 <p><?php echo $Parsedown->text($Translate->__('will-introduction--markdown'));?></p>
             </div>
         </div>
