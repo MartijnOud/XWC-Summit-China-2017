@@ -56,20 +56,20 @@ $Parsedown = new Parsedown();
                 </div>
                 <div class="tile box is-child">
                     <h2 class="subtitle"><?php echo $Translate->__('when');?></h2>
-                    <div class="countdown">
-                        <div class="countdown-days">
+                    <div class="countdown columns has-text-centered">
+                        <div class="countdown-days column">
                             <span class="countdown-days-amount">00</span>
                             <span><?php echo $Translate->__('days');?></span>
                         </div>
-                        <div class="countdown-hours">
+                        <div class="countdown-hours column">
                             <span class="countdown-hours-amount">00</span>
                             <span><?php echo $Translate->__('hours');?></span>
                         </div>
-                        <div class="countdown-minutes">
+                        <div class="countdown-minutes column">
                             <span class="countdown-minutes-amount">00</span>
                             <span><?php echo $Translate->__('minutes');?></span>
                         </div>
-                        <div class="countdown-seconds">
+                        <div class="countdown-seconds column">
                             <span class="countdown-seconds-amount">00</span>
                             <span><?php echo $Translate->__('seconds');?></span>
                         </div>
@@ -174,17 +174,17 @@ $Parsedown = new Parsedown();
 </section>
 
 <section class="section">
-    <div class="container content">
+    <div class="container content pricing">
         <h2 class="title has-text-centered"><?php echo $Translate->__('choose-option');?></h2>
 
         <div class="columns">
-            <div class="column box is-4 is-offset-1">
-                <h4 class="subtitle has-text-centered"><?php echo $Translate->__('standard');?></h4>
+            <div class="column is-4 is-offset-1 pricing-option">
+                <h4 class="subtitle has-text-centered is-uppercase has-text-weight-light is-spaced"><?php echo $Translate->__('standard');?></h4>
                 <h2 class="title has-text-centered"><?php echo $Translate->__('standard-price');?></h2>
                 <?php echo $Parsedown->text($Translate->__('standard-details--markdown'));?>
             </div>
-            <div class="column box is-4 is-offset-2">
-                <h4 class="subtitle has-text-centered"><?php echo $Translate->__('premium');?></h4>
+            <div class="column is-4 is-offset-2 pricing-option">
+                <h4 class="subtitle has-text-centered is-uppercase has-text-weight-light is-spaced"><?php echo $Translate->__('premium');?></h4>
                 <h2 class="title has-text-centered"><?php echo $Translate->__('premium-price');?></h2>
                 <?php echo $Parsedown->text($Translate->__('premium-details--markdown'));?>
             </div>
@@ -192,10 +192,10 @@ $Parsedown = new Parsedown();
     </div>
 </section>
 
-<section class="hero">
+<section class="hero is-primary is-medium is-bold">
     <div class="hero-body">
         <div class="container content has-text-centered">
-            <a href="" class="button is-large is-primary"><?php echo $Translate->__('call-to-action');?></a>
+            <a href="/" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
         </div>
     </div>
 </section>

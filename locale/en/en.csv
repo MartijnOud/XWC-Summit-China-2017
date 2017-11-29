@@ -15,7 +15,7 @@ when;When?
 when-details--markdown;December 10th, 2017
 days;Days
 hours;Hours
-minutes;minutes
+minutes;Minutes
 seconds;Seconds
 
 # speakers
@@ -41,7 +41,7 @@ event-agenda;Agenda
 event1;13:30-14:00
 event1-details;sign in and take photos
 event2;14:00-14:05
-event2-details;Presenter: Guest introduction
+event2-details;Guest introduction
 event3;14:05-14:30
 event3-details;Oizopower: The story of Whitecoin
 event4;14:30-15:05
@@ -65,7 +65,7 @@ choose-option;Choose your seat
 standard;Standard
 standard-price;￥149
 standard-details--markdown;Full access to summit. Price includes ticket, seat for 1, and exclusive Whitecoin Community New year T-Shirt.
-premium;Standard
+premium;Premium
 premium-price;￥299
 premium-details--markdown;In addition to the standard option you will also be invited to the more exclusive banquet dinner.
 call-to-action;Register now!
