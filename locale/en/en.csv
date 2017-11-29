@@ -30,13 +30,6 @@ will;Will (special guest)
 will-introduction--markdown;Block chain project investors, in the selection of digital assets have unique views.
 In 2012 into the block chain industry, investment areas covering digital currency mining, start-up investment, exchanges and so on; A key node contributor to the public block chain project LISKN LSKK; In September 2017, he joined the White Coin Community as the core promoter of the White Coin China.
 
-# choose
-choose-option;Choose your seat
-standard;Standard
-standard-price;￥149
-premium;Standard
-premium-price;￥299
-
 
 # details
 details;Details
@@ -44,3 +37,35 @@ details-venue-meeting--markdown;**Venue of the meeting:** 3 / F, Legend Plaza, 6
 details-venue-banquet--markdown;**Banquet venue:** 1 / F, Legend Plaza, 635 Bibo Road, Zhangjiang High Technology Park, Pudong New District, Shanghai.
 details-public-transport--markdown;**Public transport:** entrance 3 of Zhangjiang high-tech station, metro line 2
 details-attendance-package--markdown;All participants will be given a White Dollar Community New year T shirt. Please add the size of the shirt to the official WeChat of the White Coin Community to leave a message.
+event-agenda;Agenda
+event1;13:30-14:00
+event1-details;sign in and take photos
+event2;14:00-14:05
+event2-details;Presenter: Guest introduction
+event3;14:05-14:30
+event3-details;Oizopower: The story of Whitecoin
+event4;14:30-15:05
+event4-details;LiZhi: Application and development outline of WhiteCoin
+event5;15:05-15:25
+event5-details;Break
+event6;15:25-16:00
+event6-details;Waligu: Investmentstrategies
+event7;16:00-16:35
+event7-details;Will Wang: My investment logic of WhiteCoin
+event8;16:35-16:50
+event8-details;Oizopower: Publication of WhiteCoin
+event9;17:00-17:30
+event9-details;Closing and group photos
+event10;17:30-20:30
+event10-details;Dinner
+
+
+# choose
+choose-option;Choose your seat
+standard;Standard
+standard-price;￥149
+standard-details--markdown;Full access to summit. Price includes ticket, seat for 1, and exclusive Whitecoin Community New year T-Shirt.
+premium;Standard
+premium-price;￥299
+premium-details--markdown;In addition to the standard option you will also be invited to the more exclusive banquet dinner.
+call-to-action;Register now!

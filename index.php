@@ -110,30 +110,64 @@ $Parsedown = new Parsedown();
 
 <section class="section">
     <div class="container content">
-        <h2 class="title"><?php echo $Translate->__('choose-option');?></h2>
-
         <div class="columns">
-            <div class="column is-2 is-offset-2">
-                <h4 class="subtitle"><?php echo $Translate->__('standard');?></h4>
-                <h2 class="title"><?php echo $Translate->__('standard-price');?></h2>
-                <ul>
-                    <li><?php echo $Translate->__('standard-feature-1');?></li>
-                    <li><?php echo $Translate->__('standard-feature-2');?></li>
-                    <li><?php echo $Translate->__('standard-feature-3');?></li>
-                    <li><?php echo $Translate->__('standard-feature-4');?></li>
-                    <li><?php echo $Translate->__('standard-feature-5');?></li>
-                </ul>
+            <div class="column is-4">
+                <h2 class="title"><?php echo $Translate->__('details');?></h2>
+                <?php echo $Parsedown->text($Translate->__('details-venue-meeting--markdown'));?>
+                <?php echo $Parsedown->text($Translate->__('details-venue-banquet--markdown'));?>
+                <?php echo $Parsedown->text($Translate->__('details-public-transport--markdown'));?>
+                <?php echo $Parsedown->text($Translate->__('details-attendance-package--markdown'));?>
             </div>
-            <div class="column is-2 is-offset-3">
-                <h4 class="subtitle"><?php echo $Translate->__('premium');?></h4>
-                <h2 class="title"><?php echo $Translate->__('premium-price');?></h2>
-                <ul>
-                    <li><?php echo $Translate->__('premium-feature-1');?></li>
-                    <li><?php echo $Translate->__('premium-feature-2');?></li>
-                    <li><?php echo $Translate->__('premium-feature-3');?></li>
-                    <li><?php echo $Translate->__('premium-feature-4');?></li>
-                    <li><?php echo $Translate->__('premium-feature-5');?></li>
-                </ul>
+            <div class="column is-8">
+                <table class="table is-bordered is-striped is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered" colspan="2"><?php echo $Translate->__('event-agenda');?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><?php echo $Translate->__('event1');?></td>
+                            <td><?php echo $Translate->__('event1-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event2');?></td>
+                            <td><?php echo $Translate->__('event2-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event3');?></td>
+                            <td><?php echo $Translate->__('event3-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event4');?></td>
+                            <td><?php echo $Translate->__('event4-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event5');?></td>
+                            <td><?php echo $Translate->__('event5-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event6');?></td>
+                            <td><?php echo $Translate->__('event6-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event7');?></td>
+                            <td><?php echo $Translate->__('event7-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event8');?></td>
+                            <td><?php echo $Translate->__('event8-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event9');?></td>
+                            <td><?php echo $Translate->__('event9-details');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $Translate->__('event10');?></td>
+                            <td><?php echo $Translate->__('event10-details');?></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -141,11 +175,28 @@ $Parsedown = new Parsedown();
 
 <section class="section">
     <div class="container content">
-        <h2 class="title"><?php echo $Translate->__('details');?></h2>
-        <?php echo $Parsedown->text($Translate->__('details-venue-meeting--markdown'));?>
-        <?php echo $Parsedown->text($Translate->__('details-venue-banquet--markdown'));?>
-        <?php echo $Parsedown->text($Translate->__('details-public-transport--markdown'));?>
-        <?php echo $Parsedown->text($Translate->__('details-attendance-package--markdown'));?>
+        <h2 class="title has-text-centered"><?php echo $Translate->__('choose-option');?></h2>
+
+        <div class="columns">
+            <div class="column box is-4 is-offset-1">
+                <h4 class="subtitle has-text-centered"><?php echo $Translate->__('standard');?></h4>
+                <h2 class="title has-text-centered"><?php echo $Translate->__('standard-price');?></h2>
+                <?php echo $Parsedown->text($Translate->__('standard-details--markdown'));?>
+            </div>
+            <div class="column box is-4 is-offset-2">
+                <h4 class="subtitle has-text-centered"><?php echo $Translate->__('premium');?></h4>
+                <h2 class="title has-text-centered"><?php echo $Translate->__('premium-price');?></h2>
+                <?php echo $Parsedown->text($Translate->__('premium-details--markdown'));?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container content has-text-centered">
+            <a href="" class="button is-large is-primary"><?php echo $Translate->__('call-to-action');?></a>
+        </div>
     </div>
 </section>
 
