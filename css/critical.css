@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+.hero.is-fullheight {
+    min-height: 100vh;
+    background-color: #a2cef0;
+}
+
+.hero.is-fullheight h1,
+.hero.is-fullheight h2 {
+    display: none;
+}

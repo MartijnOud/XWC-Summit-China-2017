@@ -6,6 +6,7 @@
 
 include 'classes/Locale.php';
 include 'classes/Parsedown.php';
+include 'classes/Minify.php';
 
 $locale = strtolower(trim($_GET['language']));
 $arrLocales = ['en'];
@@ -15,21 +16,19 @@ if (!in_array($locale, $arrLocales)) {
     $locale = 'en';
 }
 $Translate = new MartijnOud\Locale($locale);
-
 $Parsedown = new Parsedown();
+
+ob_start("MinifyHTML");
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo htmlspecialchars($locale); ?>">
 <head>
+<meta charset="utf-8">
 <title><?php echo $Translate->__('page-title');?></title>
 <meta name="description" content="<?php echo $Translate->__('page-description');?>">
-
-<!-- @todo: social -->
-
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-<link rel="stylesheet" type="text/css" href="/css/main.css">
+<style><?php include __DIR__ . '/css/critical.css';?></style>
+
 </head>
 <body>
 
@@ -227,10 +226,18 @@ $Parsedown = new Parsedown();
 <section class="hero is-primary is-medium is-bold">
     <div class="hero-body">
         <div class="container content has-text-centered">
-            <a href="<?php echo $Translate->__('call-to-href');?>" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
+            <a href="<?php echo $Translate->__('call-to-action-href');?>" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
         </div>
     </div>
 </section>
+
+<noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+</noscript>
+<script>
+var loadDeferredStyles=function(){var e=document.getElementById("deferred-styles"),t=document.createElement("div");t.innerHTML=e.textContent,document.body.appendChild(t),e.parentElement.removeChild(e)},raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;raf?raf(function(){window.setTimeout(loadDeferredStyles,0)}):window.addEventListener("load",loadDeferredStyles);
+</script>
 
 <script>
 // lazy load full screen image
@@ -238,6 +245,7 @@ $Parsedown = new Parsedown();
     document.getElementsByClassName('hero')[0].classList.add('hero-background');
 })();
 
+// Countdown timer
 var countDownDate = new Date("Dec 10, 2017 13:30:00").getTime();
 var x = setInterval(function() {
 
