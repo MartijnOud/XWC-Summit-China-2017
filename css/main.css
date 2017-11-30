@@ -70,3 +70,13 @@ section {
 .pricing .pricing-option h2.title {
     font-size: 2.5rem;
 }
+
+
+.hero-footer {
+    background-image: url('/img/stars-background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}

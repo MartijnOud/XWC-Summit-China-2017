@@ -223,7 +223,7 @@ ob_start("MinifyHTML");
     </div>
 </section>
 
-<section class="hero is-primary is-medium is-bold">
+<section class="hero hero-footer">
     <div class="hero-body">
         <div class="container content has-text-centered">
             <a href="<?php echo $Translate->__('call-to-action-href');?>" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
