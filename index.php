@@ -81,28 +81,60 @@ $Parsedown = new Parsedown();
 </section>
 
 <section class="section">
-    <div class="container content">
+    <div class="container">
         <h2 class="title"><?php echo $Translate->__('speakers');?></h2>
         <div class="columns">
             <div class="column">
-                <h3 class="subtitle"><?php echo $Translate->__('oizopower');?></h3>
-                <img src="/img/photo-oizopower.png" alt="<?php echo $Translate->__('oizopower');?>">
-                <p><?php echo $Parsedown->text($Translate->__('oizopower-introduction--markdown'));?></p>
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-1by1">
+                            <img src="/img/photo-oizopower.png" alt="<?php echo $Translate->__('oizopower');?>">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title"><?php echo $Translate->__('oizopower');?></h3>
+                        <p><?php echo $Parsedown->text($Translate->__('oizopower-introduction--markdown'));?></p>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <h3 class="subtitle"><?php echo $Translate->__('lizhi');?></h3>
-                <img src="/img/photo-lizhi.png" alt="<?php echo $Translate->__('lizhi');?>">
-                <p><?php echo $Parsedown->text($Translate->__('lizhi-introduction--markdown'));?></p>
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-1by1">
+                            <img src="/img/photo-lizhi.png" alt="<?php echo $Translate->__('lizhi');?>">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title"><?php echo $Translate->__('lizhi');?></h3>
+                        <p><?php echo $Parsedown->text($Translate->__('lizhi-introduction--markdown'));?></p>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <h3 class="subtitle"><?php echo $Translate->__('waligu');?></h3>
-                <img src="/img/photo-waligu.png" alt="<?php echo $Translate->__('waligu');?>">
-                <p><?php echo $Parsedown->text($Translate->__('waligu-introduction--markdown'));?></p>
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-1by1">
+                            <img src="/img/photo-waligu.png" alt="<?php echo $Translate->__('waligu');?>">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title"><?php echo $Translate->__('waligu');?></h3>
+                        <p><?php echo $Parsedown->text($Translate->__('waligu-introduction--markdown'));?></p>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <h3 class="subtitle"><?php echo $Translate->__('will');?></h3>
-                <img src="/img/photo-will.png" alt="<?php echo $Translate->__('will');?>">
-                <p><?php echo $Parsedown->text($Translate->__('will-introduction--markdown'));?></p>
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-1by1">
+                            <img src="/img/photo-will.png" alt="<?php echo $Translate->__('will');?>">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title"><?php echo $Translate->__('will');?></h3>
+                        <p><?php echo $Parsedown->text($Translate->__('will-introduction--markdown'));?></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
