@@ -37,7 +37,7 @@ $Parsedown = new Parsedown();
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title"><?php echo $Translate->__('xwc-summit-china-2017');?></h1>
-      <h2 class="subtitle"><?php echo $Translate->__('2017-10-12-shanghai-china');?></h2>
+      <h2 class="subtitle"><?php echo $Translate->__('2017-12-10-shanghai-china');?></h2>
     </div>
   </div>
 </section>
