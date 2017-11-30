@@ -227,7 +227,7 @@ $Parsedown = new Parsedown();
 <section class="hero is-primary is-medium is-bold">
     <div class="hero-body">
         <div class="container content has-text-centered">
-            <a href="/" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
+            <a href="<?php echo $Translate->__('call-to-href');?>" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
         </div>
     </div>
 </section>
