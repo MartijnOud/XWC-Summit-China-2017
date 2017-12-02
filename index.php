@@ -9,10 +9,10 @@ include 'classes/Parsedown.php';
 include 'classes/Minify.php';
 
 $locale = strtolower(trim($_GET['language']));
-$arrLocales = ['en'];
+$arrLocales = ['en' => 'English', 'nl' => 'Nederlands'];
 
 // default to english
-if (!in_array($locale, $arrLocales)) {
+if (!array_key_exists($locale, $arrLocales)) {
     $locale = 'en';
 }
 $Translate = new MartijnOud\Locale($locale);
@@ -29,6 +29,12 @@ ob_start("MinifyHTML");
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style><?php include __DIR__ . '/css/critical.css';?></style>
 
+<link rel="alternate" href="<?php echo 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://'.$_SERVER['HTTP_HOST'];?>" hreflang="x-default" />
+<?php
+foreach ($arrLocales as $key => $value) {
+    echo '<link rel="alternate" href="http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://'.$_SERVER['HTTP_HOST'].'?language='.$key.'" hreflang="'.$key.'">';
+}
+?>
 </head>
 <body>
 
@@ -223,13 +229,41 @@ ob_start("MinifyHTML");
     </div>
 </section>
 
-<section class="hero hero-footer">
+<section class="hero hero-footer is-medium">
     <div class="hero-body">
         <div class="container content has-text-centered">
             <a href="<?php echo $Translate->__('call-to-action-href');?>" class="button is-large is-primary is-inverted is-outlined"><?php echo $Translate->__('call-to-action');?></a>
         </div>
     </div>
 </section>
+
+<div class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-8 content">
+                <p><?php echo $Translate->__('whitecoin-social');?></p>
+                <ul>
+                    <li><a href="https://twitter.com/WhiteCoiner" rel="nofollow">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/WhitecoinXWC/" rel="nofollow">Facebook</a></li>
+                    <li><a href="https://www.reddit.com/r/whitecoin/" rel="nofollow">Reddit</a></li>
+                </ul>
+            </div>
+            <div class="column is-4">
+               <form method="get">
+                   <div class="select is-medium is-pulled-right">
+                       <select name="language" onchange="this.form.submit()">
+                       <?php
+                       foreach ($arrLocales as $key => $val) {
+                           echo '<option value="'.$key.'" '.($key == $locale ? 'selected' : '').'>'.$val.'</option>';
+                       }
+                       ?>
+                       </select>
+                   </div>
+               </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <noscript id="deferred-styles">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">

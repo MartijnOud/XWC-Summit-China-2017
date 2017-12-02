@@ -80,3 +80,8 @@ section {
     height: 100%;
     width: 100%;
 }
+
+.footer {
+    background-color: #ffffff;
+    padding: 3rem 1.5rem 0rem;
+}
