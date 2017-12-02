@@ -1,15 +1,14 @@
 <?php
 /**
- * Temp homepage
+ * Whitecoin XWC Summit 2017 homepage
  *
  */
-
+include 'settings.php';
 include 'classes/Locale.php';
 include 'classes/Parsedown.php';
 include 'classes/Minify.php';
 
 $locale = strtolower(trim($_GET['language']));
-$arrLocales = ['en' => 'English', 'nl' => 'Nederlands'];
 
 // default to english
 if (!array_key_exists($locale, $arrLocales)) {
@@ -34,7 +33,22 @@ ob_start("MinifyHTML");
 foreach ($arrLocales as $key => $value) {
     echo '<link rel="alternate" href="http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://'.$_SERVER['HTTP_HOST'].'?language='.$key.'" hreflang="'.$key.'">';
 }
+
+if (!empty($AnalyticsUA)) {
 ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $AnalyticsUA;?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<?php echo $AnalyticsUA;?>');
+    </script>
+<?php
+}
+?>
+
 </head>
 <body>
 
